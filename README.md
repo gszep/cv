@@ -1,1 +1,1 @@
-`fulltime.pdf` to view my cv
+### Resume
