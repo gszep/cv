@@ -1,0 +1,282 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                       %
+%    C U R R I C U L U M    V I T A E   %
+%                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%--------------------------------------------------
+%       PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%--------------------------------------------------
+
+\documentclass{scrartcl}
+
+% Move the margin to the left of the page
+\reversemarginpar
+
+% New command defining the margin text style
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}}
+
+% Use the classicthesis style for the style of the document
+\usepackage[nochapters]{classicthesis}
+
+% Use the currvita style for the layout of the document
+\usepackage[LabelsAligned]{currvita}
+
+% Required for margin settings
+\usepackage{geometry}
+
+% Font color of your name at the top
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}}
+
+% Required for adding links and customizing them
+\usepackage{hyperref}
+
+% Set link colors
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon}
+
+% Set the width of the date box in each block
+\newlength{\datebox}\settowidth{\datebox}{MM-MM YYYY}
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+% Page Margins
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=50mm,
+ right=20mm,
+ top=15mm,
+ bottom=15mm,
+ }
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+%----------------------------------------------
+%       NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------
+
+\begin{cv}{\spacedallcaps{Gregory Szep}}\vspace{1.5em} 
+% Your name
+
+\noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} 
+% Personal information heading
+
+\NewEntry{}{\textit{Born in Vienna, Austria}}{1992} 
+% Birthplace and date
+
+\NewEntry{email}{\href{mailto:gszep@ist.ac.at}{gregory.szep@gmail.com}}
+% Email address
+
+\NewEntry{phone}{ +44 7956 329010} 
+
+\vspace{1em} % Extra space between major sections
+
+%---------------------------------------------
+%       EDUCATION
+%---------------------------------------------
+
+\noindent\spacedlowsmallcaps{Education}\vspace{1em}
+
+%------------------------------------------------
+
+\NewEntry{09/2011 - 05/2015}{University of London, King's College}
+
+\Description{\MarginText{Physics Masters}First Class
+	$\cdotp$ \textit{Physics MSci}
+	$\cdotp$ School of Natural \& Mathematical Science
+	\newline 
+	 Focus on non-equilibrium statistical mechanics, information theory and complex networks. Masters project involved using the Keldysh formalism to investigate angular dependance of molecular current-voltage characteristics.
+	\newline
+	Project Supervisor: Prof.~Lev \textsc{Kantorovich} 
+	$\cdotp$ \href{mailto:lev.kantorovich@kcl.ac.k}{lev.kantorovich@kcl.ac.uk}}
+
+%------------------------------------------------
+
+\NewEntry{08/2013 - 06/2014}{University of California, Berkeley}
+
+\Description{\MarginText{Exchange Year}GPA: 3.7
+	$\cdotp$ \textit{Physics Major}
+	$\cdotp$ College of Letters \& Science
+	\newline
+	Attended lectures at the Redwood Center for Theoretical Neuroscience. Expanded knowledge on analytical mechanics, special relativity, solid state physics and machine learning. Duration of stay motivated academic path and insight into different academic and industrial cultures.
+	\newline
+	Study Abroad Tutor: Nicola \textsc{Bonini}
+	$\cdotp$ \href{mailto:nicola.bonini@kcl.ac.uk}{nicola.bonini@kcl.ac.uk}}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+%------------------------------------------------------
+%                  WORK EXPERIENCE
+%------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
+
+\NewEntry{11/2016 - Present}{Research Engineer, \textsc{Delft}}
+
+\Description{\MarginText{Birds.ai}Development and maintenance of drone image analysis pipeline for agricultural surveillance and industrial inspection. Applied machine learning techniques and learned how to deploy scalable and secure web applications.
+	\newline
+	Chief Executive Officer: Camiel \textsc{Verschoor}
+	$\cdotp$  \href{mailto:camiel@birds.ai}{camiel@birds.ai}}
+
+\NewEntry{09/2015 - 11/2016}{Graduate Researcher, \textsc{Vienna}}
+
+\Description{\MarginText{Institute of Science and Technology}Rotations in cell migration and biochemistry groups lead to investigation of non-equilibrium responses of Lamellipodial Actin and in vitro reconstituted FtsZ:FtsA vortexes. Submittion of Kinetic Monte-Carlo and deterministic rate equation approaches currently under review.
+	\newline
+	Dr. Med. Michael \textsc{Sixt}
+	$\cdotp$  \href{mailto:msixt@ist.ac.at}{msixt@ist.ac.at}
+	Prof.~Karsten \textsc{Kruse}
+	$\cdotp$ \href{mailto:k.kruse@physik.uni-saarland.de}{k.kruse@physik.uni-saarland.de}}
+
+\NewEntry{07/2014 - 09/2015}{Contractor, \textsc{NASA Ames Silicon Valley}}
+
+\Description{\MarginText{NASA Ames Research Centre}Coding of unsupervised machine learning algorithms to classify sleep stages on high resolution single channel electroencephalogram (EEG) recordings. Extraction of biomarkers related to neurophysiological disorders and development of communication software.
+	\newline
+	Chief Executive Officer: Dr Philip \textsc{Low}
+	$\cdotp$ \href{mailto:dhowe@neurovigil.com}{philip@neurovigil.com}}
+
+\NewEntry{Winter Seasons}{Kids Instructor, \textsc{Switzerland}}
+
+\Description{\MarginText{Gstaad Snowsports}Group and private lessons in 250km of alpine pistes. Lessons taught in German, French, English and Russian. Pedagogical  training with children ages 3-13. Development of long term client relationships.
+	\newline
+	School Director: Jan \textsc{Brand}
+	$\cdotp$ \href{mailto:jan@gstaadsnowsports.ch}{jan@gstaadsnowsports.ch}}
+
+\NewEntry{06/2013 - 08/2013}{Research Studentship, \textsc{King's College
+London}}
+
+\Description{\MarginText{King's College London}Simulation of photon transport in random lasing process. Collection and analysis of data from experiment. Presentation of findings and evaluation as member of research team.
+	\newline
+	Research Supervisor: Dr Riccardo \textsc{Sapienza}
+	$\cdotp$ \href{mailto:riccardo.sapienza@kcl.ac.uk}{riccardo.sapienza@kcl.ac.uk}}
+
+\pagebreak
+
+\NewEntry{Sep-Dec 2012}{Market Stall Owner, \textsc{Camden Market}}
+
+\Description{\MarginText{Camden Market}Managing market stall in tourist area of north London selling 3D IQ puzzles made of wood and bamboo. Creative presentation and sales to young and old audiences. Financial planning.
+	\newline
+	Supplier Contact: Ben \textsc{Meldrum}
+	$\cdotp$ \href{mailto:ben@professorpuzzle.com}{ben@professorpuzzle.com}}
+
+\NewEntry{Jan-Dec 2012}{Secondary Education Tutor, \textsc{Private} --- London}
+
+\Description{\MarginText{Private Tutor}Tutoring (I)GCSEs, A-levels and IB curricula, specialising in Maths and Physics. Emphasis on the presentation and communication of science. Multiple perspective problem solving.}
+
+%------------------------------------------------
+
+\NewEntry{09/2011 - 09/2012}{Venues Team, \textsc{King's College Student Union} }
+
+\Description{\MarginText{King's College Student Union}Organisation and catering staff at student events and bars. Stamina, sweat and teamwork to quench the thirst of students. The good life at the bar.
+	\newline
+	Manager: Chris \textsc{Wynne}
+	$\cdotp$ \href{mailto:Chris.Wynne@kclsu.org}{Chris.Wynne@kclsu.org}}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%       COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Computer Skills}\vspace{1em}
+
+\Description{\MarginText{Intermediate}
+	\textsc{Development}
+	Latex, Amazon Web Services
+	\textsc{Programming}
+	C++, Lua, Wolfram Mathematica}
+    
+    
+
+\Description{\MarginText{Advanced}
+	\textsc{Development}
+	Git, Linux Server
+	\textsc{Programming}
+	NodeJs, Python }
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%       LANGUAGES
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Languages}\vspace{1em}
+
+\Description{\MarginText{Basic} Hungarian}
+
+\Description{\MarginText{Intermediate} Russian, French}
+
+\Description{\MarginText{Advanced} English, German}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%       PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Publications}\vspace{1em}
+
+\Description{M\"uller, J. 2016. Load-adaptation of lamellipodial actin networks. Cell Press [ In Review ]}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+
+%----------------------------------------------------------------------------------------
+%       AWARDS & QUALIFICATIONS
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Awards \& Qualifications}\vspace{1em}
+
+\Description{\MarginText{Awards}2014
+	$\cdotp$ Study Abroad Student Award -- King's College London}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space
+
+\Description{2013 $\cdotp$ The Gordon Rogers Scholarship - Top 5  Performing Students}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space
+
+\Description{2013 $\cdotp$ Andrewes Prize  - Best Examination Performance}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space
+
+\Description{2012 $\cdotp$ Dillon Prize  - Best Examination Performance}
+
+%------------------------------------------------
+
+\vspace{1em}
+
+\Description{\MarginText{Qualifications}2016
+	$\cdotp$ Electron Microscope Training - Institute of Science \& Technology}
+
+\vspace{-0.5em} 
+% Negative vertical space between every \Description command
+
+\Description{2013 $\cdotp$ Basic Laser Safety Certificate - King's College London}
+
+\vspace{-0.5em} 
+% Negative vertical space between every \Description command
+
+\Description{2012 $\cdotp$ Kids Ski Instructor Certificate - Swiss Snowsports}
+
+
+%------------------------------------------------
+
+\end{cv}
+
+\end{document}
